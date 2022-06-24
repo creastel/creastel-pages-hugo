@@ -1,0 +1,44 @@
+{{- define "main" }}
+
+{{- if eq .Title "Products" }}
+{{- partial "products_list.html" . }}
+{{- else }}
+
+{{- if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <p class="introduction-paragraph">{{ .Description | markdownify }}</p><br />
+    {{- end }}
+</header>
+{{- end }}
+{{- end }}
+
+<ul class="">
+    {{- $type := .Type }}
+    {{- range $key, $value := .Data.Terms.Alphabetical }}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+    <!-- <li>
+        <a href="{{ .Permalink }}">{{ .Name }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+    </li> -->
+    <article class="post-entry tag-entry">
+        <header class="entry-header">
+            <h2>
+                {{- .Name }}
+            </h2>
+        </header>
+        <div class="entry-content">
+            <p>{{ .Description | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        </div>
+        <footer class="entry-footer">
+            {{ $count }} documents
+        </footer>
+        <a class="entry-link" aria-label="post link to {{ .Name | plainify }}" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+    {{- end }}
+</ul>
+
+{{- end }}{{/* end main */ -}}

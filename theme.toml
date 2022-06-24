@@ -1,0 +1,11 @@
+name = "creastel-pages"
+license = "All rights reserved to Creastel"
+licenselink = "https://github.com/creastel/creastel-pages-hugo/blob/master/LICENSE"
+description = "Creastel theme for pages."
+homepage = "https://github.com/creastel/creastel-pages-hugo/"
+
+min_version = "0.59.0"
+
+[author]
+  name = "Creastel SAS"
+  homepage = "https://github.com/creastel/"

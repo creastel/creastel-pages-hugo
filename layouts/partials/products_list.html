@@ -1,0 +1,13 @@
+<header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    {{- if eq .Title "Products" }}
+    <div class="introduction-paragraph">
+        {{ i18n "creastel_description" | markdownify }}
+    </div><br />
+    {{- else }}
+    <h1>{{ .Title }}</h1>
+    <div class="post-description">
+        {{ .Description | markdownify }}
+    </div>
+    {{- end }}
+</header>
