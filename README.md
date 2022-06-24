@@ -9,8 +9,10 @@ This template is made for Hugo.
 Inside the folder of your Hugo project, run:
 
 ```
-git submodule add https://github.com/creastel/creastel-pages-hugo themes/creastel-pages
+git submodule add git@github.com:creastel/creastel-pages-hugo.git site/themes/creastel-pages
 ```
+
+Note that the `site/` segment need to be added if using NetlifyCMS. Also, as the repository is private, an SSH key is needed to clone the submodule.
 
 Open `config.toml`, change theme to "creastel-pages":
 
