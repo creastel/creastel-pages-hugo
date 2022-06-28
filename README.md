@@ -4,7 +4,7 @@ Creastel Pages is a template for pages (legals, documentation, etc.) developed b
 
 This template is made for Hugo.
 
-## Install
+## Installation
 
 Inside the folder of your Hugo project, run:
 
@@ -25,3 +25,11 @@ theme = "creastel-pages"
 If the website is built on deployment, the building platform need to have a deploy key associated to the repo.
 
 Documentation for Netlify: https://docs.netlify.com/configure-builds/repo-permissions-linking/#deploy-keys
+
+## Update
+
+To update the submodule in your code, run:
+
+```
+git submodule update --init --recursive
+```
