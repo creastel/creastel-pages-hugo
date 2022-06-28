@@ -1,0 +1,21 @@
+.content-button-redirect {
+    border: 1px solid var(--border);
+    background: var(--entry);
+    border-radius: var(--radius);
+    transition: transform .1s;
+    padding: 12px;
+    box-shadow: none !important;
+    text-align: center;
+    flex: 1;
+}
+
+.content-button-redirect:hover {
+    transform: scale(1.02);
+}
+
+.side-to-side {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
