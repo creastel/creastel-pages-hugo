@@ -2,7 +2,7 @@
     {{- partial "breadcrumbs.html" . }}
     {{- if eq .Title "Products" }}
     <div class="introduction-paragraph">
-        {{ i18n "creastel_description" | markdownify }}
+        {{ .Description | markdownify }}
     </div><br />
     {{- else }}
     <h1>{{ .Title }}</h1>

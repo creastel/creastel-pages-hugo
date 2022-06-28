@@ -4,14 +4,14 @@
 {{- partial "products_list.html" . }}
 {{- else }}
 
-{{- if .Title }}
 <header class="page-header">
-    <h1>{{ .Title }}</h1>
+    {{- if .Title }}
+        <h1>{{ .Title }}</h1>
+    {{- end }}
     {{- if .Description }}
-    <p class="introduction-paragraph">{{ .Description | markdownify }}</p><br />
+        <p class="introduction-paragraph">{{ .Description | markdownify }}</p><br />
     {{- end }}
 </header>
-{{- end }}
 {{- end }}
 
 <ul class="">

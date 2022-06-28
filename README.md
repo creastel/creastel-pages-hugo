@@ -19,3 +19,9 @@ Open `config.toml`, change theme to "creastel-pages":
 ```
 theme = "creastel-pages"
 ```
+
+## Configuration
+
+If the website is built on deployment, the building platform need to have a deploy key associated to the repo.
+
+Documentation for Netlify: https://docs.netlify.com/configure-builds/repo-permissions-linking/#deploy-keys

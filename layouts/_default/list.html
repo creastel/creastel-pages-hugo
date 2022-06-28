@@ -12,7 +12,6 @@
     </script>
 {{- end }}
 
-
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
@@ -21,7 +20,7 @@
     {{- partial "breadcrumbs.html" . }}
     {{- if eq .Title "Products" }}
     <div class="introduction-paragraph">
-        {{ i18n "creastel_description" | markdownify }}
+        {{ .Description | markdownify }}
     </div><br />
     {{- else }}
     <h1>{{ .Title }}</h1>
