@@ -1,16 +1,33 @@
-.content-button-redirect {
+.post-button {
     border: 1px solid var(--border);
     background: var(--entry);
     border-radius: var(--radius);
     transition: transform .1s;
-    padding: 12px;
+    padding: var(--gap);
     box-shadow: none !important;
-    text-align: center;
-    flex: 1;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
 }
 
-.content-button-redirect:hover {
+.post-button:hover {
     transform: scale(1.02);
+}
+
+.post-button-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+}
+
+.post-button-description {
+    font-size: 15px;
+    color: var(--secondary);
+    margin: 8px 0 0 0;
 }
 
 .side-to-side {
